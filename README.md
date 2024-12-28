@@ -35,46 +35,30 @@ Python: For processing text and generating hashtags.
 Installation Instructions
 To run this project locally, follow these steps:
 
-### 1. Clone the Repository
-Clone the repository to your local machine using the following command:
-```bash
-git clone https://github.com/Winnitt/HashMate.git
-2. Navigate to the Project Directory
-Change into the project directory:
+# Clone the repository:
 
-bash
-Copy code
-cd social-media-hashtag-generator
-3. Create a Virtual Environment
-Create a virtual environment to isolate the project dependencies:
 
-bash
-Copy code
-python -m venv venv
-4. Activate the Virtual Environment
-On macOS/Linux, activate the virtual environment:
-bash
-Copy code
-source venv/bin/activate
-On Windows, use the following command:
-bash
-Copy code
-venv\Scripts\activate
-5. Install Required Dependencies
-Install all required dependencies listed in the requirements.txt file:
+Copy code &nbsp;
+git clone https://github.com/Winnitt/HashMate.git &nbsp;
+cd social-media-hashtag-generator &nbsp;
+Create a virtual environment: &nbsp;
 
-bash
-Copy code
-pip install -r requirements.txt
-6. Run the Application
-Start the Flask application with the following command:
 
-bash
-Copy code
-flask run
-The application will be available at http://127.0.0.1:5000/.
+Copy code &nbsp;
+python -m venv venv&nbsp;
+source venv/bin/activate  # On Windows, use `venv\Scripts\activate`&nbsp;
+Install required dependencies:&nbsp;
 
-Enjoy using HashMate!
+
+Copy code&nbsp;
+pip install -r requirements.txt&nbsp;
+Run the application:&nbsp;
+
+
+Copy code&nbsp;
+flask run&nbsp;
+The application will be available at http://127.0.0.1:5000/.&nbsp;
+
 # Code Quality
 Well-Organized Structure: The project follows a clean MVC structure, separating the Flask routes, HTML templates, and Python code for better maintainability.
 Readable and Maintainable: The code uses clear naming conventions and comments for easy readability.

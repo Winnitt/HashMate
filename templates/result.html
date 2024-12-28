@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results for {{ description }}</title>
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        h3 {
+            color: #007bff;
+        }
+
+        .hashtags-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .hashtags-list li {
+            background-color: #e9ecef;
+            margin: 5px 0;
+            padding: 8px;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .hashtag {
+            display: inline-block;
+            margin: 2px;
+            padding: 5px 10px;
+            background-color: #007bff;
+            color: white;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .hashtag:hover {
+            background-color: #0056b3;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+        }
+
+        .back-link:hover {
+            color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <h3>Category: {{ category | capitalize }}</h3>
+        <ul class="hashtags-list">
+            {% for key, hashtags in trends.items() %}
+                <li>
+                    <strong>{{ key }}:</strong>
+                    <ul>
+                        {% for hashtag in hashtags %}
+                            <li><span class="hashtag">#{{ hashtag }}</span></li>
+                        {% endfor %}
+                    </ul>
+                </li>
+            {% endfor %}
+        </ul>
+        <a href="/" class="back-link">Back to search</a>
+    </div>
+</body>
+</html>

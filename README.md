@@ -37,19 +37,19 @@ To run this project locally, follow these steps:
 
 # Clone the repository:
 
-bash
+
 Copy code
-git clone [https://github.com/yourusername/instagram-hashtag-generator.git](https://github.com/Winnitt/HashMate.git)
+git clone https://github.com/Winnitt/HashMate.git
 cd social-media-hashtag-generator
 Create a virtual environment:
 
-bash
+
 Copy code
 python -m venv venv
 source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
 Install required dependencies:
 
-bash
+
 Copy code
 pip install -r requirements.txt
 Run the application:

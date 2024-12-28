@@ -38,26 +38,26 @@ To run this project locally, follow these steps:
 # Clone the repository:
 
 
-Copy code
-git clone https://github.com/Winnitt/HashMate.git
-cd social-media-hashtag-generator
-Create a virtual environment:
+Copy code &nbsp;
+git clone https://github.com/Winnitt/HashMate.git &nbsp;
+cd social-media-hashtag-generator &nbsp;
+Create a virtual environment: &nbsp;
 
 
-Copy code
-python -m venv venv
-source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
-Install required dependencies:
+Copy code &nbsp;
+python -m venv venv&nbsp;
+source venv/bin/activate  # On Windows, use `venv\Scripts\activate`&nbsp;
+Install required dependencies:&nbsp;
 
 
-Copy code
-pip install -r requirements.txt
-Run the application:
+Copy code&nbsp;
+pip install -r requirements.txt&nbsp;
+Run the application:&nbsp;
 
-bash
-Copy code
-flask run
-The application will be available at http://127.0.0.1:5000/.
+
+Copy code&nbsp;
+flask run&nbsp;
+The application will be available at http://127.0.0.1:5000/.&nbsp;
 
 # Code Quality
 Well-Organized Structure: The project follows a clean MVC structure, separating the Flask routes, HTML templates, and Python code for better maintainability.

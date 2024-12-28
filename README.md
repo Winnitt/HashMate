@@ -44,11 +44,16 @@ To run this project locally, follow these steps:
    ```bash
    git clone https://github.com/Winnitt/HashMate.git
    cd social-media-hashtag-generator
+2. ```bash
 python -m venv venv
+3. ```bash
 source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+4. ```bash
 pip install -r requirements.txt
+5. ```bash
 flask run
-The application will be available at http://127.0.0.1:5000/.
+
+6. The application will be available at http://127.0.0.1:5000/.
 
 ### Code Quality
 Well-Organized Structure: The project follows a clean MVC structure, separating the Flask routes, HTML templates, and Python code for better maintainability.
@@ -81,10 +86,12 @@ Niche Hashtags:
 
 #EcoFriendlyLife
 #MinimalistLiving
+
 Emerging Hashtags:
 
 #GreenRevolution
 #SustainableLiving
+
 Trending Hashtags:
 
 #ClimateChange

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HashMate</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        textarea {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            resize: none;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            padding: 15px;
+        }
+        .card h3 {
+            margin-top: 0;
+            color: #333;
+        }
+        .competition-level {
+            margin: 10px 0;
+        }
+        .low {
+            color: #28a745;
+        }
+        .moderate {
+            color: #ffc107;
+        }
+        .high {
+            color: #dc3545;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>HashMate - Instagram Hashtag Generator</h1> &nbsp;
+        <form method="POST">
+          <h2> <b> <label for="description">Enter your post description:</label></b></h2>
+
+            <textarea id="description" name="description" placeholder="Write your post here..." required></textarea>
+            <button type="submit">Analyze Hashtags</button>
+        </form>
+
+        {% if hashtags %}
+        <h2>Generated Hashtags and Analysis:</h2>
+        {% for keyword, categories in hashtags.items() %}
+            <div class="card">
+                <h3>{{ keyword.capitalize() }}</h3>
+                <div class="competition-level low">
+                    <strong>Niche Hashtags:</strong>
+                    <p>{{ ", ".join(categories.low_competition) }}</p>
+                </div>
+                <div class="competition-level moderate">
+                    <strong>Emerging Hashtags:</strong>
+                    <p>{{ ", ".join(categories.moderate_competition) }}</p>
+                </div>
+                <div class="competition-level high">
+                    <strong>Trending Hashtags:</strong>
+                    <p>{{ ", ".join(categories.high_competition) }}</p>
+                </div>
+            </div>
+        {% endfor %}
+        {% endif %}
+    </div>
+</body>
+</html>
